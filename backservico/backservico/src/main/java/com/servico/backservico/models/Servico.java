@@ -15,19 +15,26 @@ import lombok.Data;
 @Table(name= "servico")
 @Data
 public class Servico {
-    
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
+
     private String nomeCLiente;
+
     @Temporal(TemporalType.DATE)
     private Date dataInicio=new Date();
+
     @Temporal(TemporalType.DATE)
-    private Date dataTerminal;  
+    private Date dataTerminal;
+
     private String descricaoServico;
+
     private Double valorServico;
+
     private Double valorPago;
+
     @Temporal(TemporalType.DATE)
     private Date dataPagamento;
+    
     private String status;
 }
