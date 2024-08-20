@@ -18,6 +18,14 @@ public class ServicoService {
         return servicoRepository.findAll();
     }
 
+    public List<Servico> buscarServicosPagamentoPendente(){
+        return servicoRepository.buscarServicosPagamentoPendente();
+    }
+
+    public List<Servico> buscarServicoCancelados(){
+        return servicoRepository.buscarServicosCancelados();
+    }
+
     public Servico inserir( Servico servico){
         if(servico.getValorPago()==null || servico.getValorPago()==0 || servico.getDataPagamento()==null){
             servico.setStatus("pendente");
@@ -32,8 +40,6 @@ public class ServicoService {
         if(servico.getValorPago()!= null && servico.getValorPago()>0 && servico.getDataPagamento()!=null){
             servico.setStatus("Realizado");
         }
-
-
         return servicoRepository.saveAndFlush(servico);
     }
 
