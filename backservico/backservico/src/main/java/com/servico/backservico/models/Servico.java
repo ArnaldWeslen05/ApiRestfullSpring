@@ -19,7 +19,7 @@ public class Servico {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
-    private String nomeCLiente;
+    private String nomeCliente;
 
     @Temporal(TemporalType.DATE)
     private Date dataInicio=new Date();
@@ -35,6 +35,6 @@ public class Servico {
 
     @Temporal(TemporalType.DATE)
     private Date dataPagamento;
-    
+
     private String status;
 }
