@@ -45,7 +45,7 @@ public class ServicoController {
         return servicoService.inserir(servico);
     }
 
-    @PutMapping("/{id}")
+    @PostMapping("/{id}")
     public ResponseEntity<Void> cancelar(@PathVariable("id") Long id){
         servicoService.cancelarServico(id);
         return ResponseEntity.ok().build();
