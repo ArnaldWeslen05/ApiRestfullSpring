@@ -52,7 +52,7 @@ function Servico() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (servico.id==undefined) {
+    if (servico.id===undefined) {
       axios
         .post("http://localhost:8080/api/servico/", servico)
         .then((result) => {
@@ -185,7 +185,7 @@ function Servico() {
               <td>{serv.valorServico}</td>
               <td>{serv.status}</td>
               <td>
-                {serv.staus != "cancelado" && (
+                {serv.staus !== "cancelado" && (
                   <button
                     onClick={() => setServico(serv)}
                     className="btn btn-primary"
@@ -194,7 +194,7 @@ function Servico() {
                   </button>
                 )}
                 &nbsp;&nbsp;
-                {serv.staus != "cancelado" && (
+                {serv.staus !== "cancelado" && (
                   <button onClick={()=> excluir(serv.id)} className="btn btn-danger">Excluir</button>
                 )}
                 &nbsp;&nbsp;
