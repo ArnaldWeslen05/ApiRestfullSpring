@@ -1,13 +1,10 @@
 
 import './App.css';
+import Servico from './servico/Servico';
 
 function App() {
   return (
-   <div>
-      <h1>
-        Cadastro de Serviços
-      </h1>
-   </div>
+    <Servico></Servico>
   );
 }
 

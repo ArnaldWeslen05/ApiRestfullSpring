@@ -25,7 +25,7 @@ public class Servico {
     private Date dataInicio=new Date();
 
     @Temporal(TemporalType.DATE)
-    private Date dataTerminal;
+    private Date dataTermino;
 
     private String descricaoServico;
 
